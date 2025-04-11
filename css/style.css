@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 * {
@@ -16,13 +17,12 @@ body {
     font-size: medium;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3{
     font-family: "Ga Maamli", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
+
 
 :root {
     --cor-primaria: #A80C1B;
@@ -147,7 +147,7 @@ header img {
 
 .modalidade-card .texto h3 {
     font-size: 1.7rem;
-    color: var(--cor-texto);
+    color: var(--cor-primaria);
     margin-bottom: 12px;
 }
 
@@ -246,7 +246,7 @@ header img {
 
 .card h3 {
     padding: 15px 15px 5px;
-    color: #fff;
+    color:var(--cor-primaria);
 }
 
 .card p {
@@ -277,8 +277,7 @@ header img {
 .card-horario h3 {
     font-size: 1.5rem;
     margin-bottom: 12px;
-    color: var(--cor-texto, #f87171);
-    /* vermelho suave como cor destaque */
+    color: var(--cor-primaria);
 }
 
 .card-horario p {
@@ -332,7 +331,7 @@ header img {
 .planos .plano-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: var(--cor-texto);
+    color: var(--cor-primaria);
 }
 
 .planos .preco {
@@ -368,6 +367,8 @@ header img {
     border: 2px solid var(--cor-primaria);
 }
 
+
+
 /* Animação */
 @keyframes fadeInUp {
     to {
@@ -377,13 +378,47 @@ header img {
 }
 
 
-footer {
-    background-color: #111;
-    padding: 30px 20px;
-    text-align: center;
-    color: #888;
+.rodape {
+    background-color: #121212;
+    color: #ccc;
+    padding: 20px 40px;
     font-size: 14px;
-    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-esquerda,
+.footer-centro,
+.footer-direita {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-centro p {
+    margin: 5px 0;
+}
+
+.logo-footer {
+    width: 80px;
+    height: auto;
+}
+
+.icon-instagram {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1); /* deixa o ícone branco, se for SVG ou PNG escuro */
+    transition: transform 0.3s ease;
+}
+
+.instagram-link:hover .icon-instagram {
+    transform: scale(1.1);
 }
 
 /* Responsivo */
